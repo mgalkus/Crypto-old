@@ -1,0 +1,448 @@
+section.landing {
+    position: relative;
+    height: calc(100vh - 62px);
+
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mobile {
+            width: 80%;
+        }
+    }
+
+    h1 {
+        font-size: 46px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        color: $black;
+
+        @include tablet-l {
+            font-size: 40px;
+
+        }
+
+        @include tablet-p {
+            font-size: 35px;
+
+        }
+
+        @include mobile {
+            font-size: 26px;
+
+        }
+    }
+
+    p {
+        color: $grey;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    .join {
+        @include btn;
+    }
+
+    .flex-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12px;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    .feedback {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        display: flex;
+
+        img {
+            width: 26px;
+        }
+
+        .plane,
+        .message {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .plane {
+            border: 3px solid $black;
+        }
+
+        .message {
+            background: $mid-blue;
+        }
+    }
+}
+
+section.sponsors {
+    background: #f6f6f6;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mobile {
+            justify-content: space-around;
+        }
+    }
+
+    img {
+        width: 16%;
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+
+        @include mobile {
+            width: 35%;
+            margin-bottom: 15px;
+        }
+    }
+
+    h2 {
+        @include heading2;
+        margin-bottom: 10px;
+    }
+}
+
+section.about {
+    background: $light-blue;
+    padding: 90px 0;
+
+    .container {
+        display: flex;
+        position: relative;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    .shape {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        box-sizing: border-box;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .shape1 {
+        border: 10px solid $mid-blue;
+        border-radius: 50%;
+        top: -60px;
+        left: 0;
+    }
+
+    .shape2 {
+        border: 10px solid $sand;
+        left: 30%;
+        bottom: -60px;
+    }
+
+    .shape3 {
+        border: 10px solid $purple;
+        right: 60px;
+        top: 30%;
+        transform: rotate(45deg);
+    }
+
+    .left {
+        width: 35%;
+        margin-right: 2%;
+
+        @include mobile {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        h2 {
+            @include heading2;
+            text-align: left;
+        }
+
+        .line {
+            @include line(white);
+        }
+
+        p {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            color: #666;
+        }
+    }
+
+    .right {
+        width: 63%;
+
+        @include mobile {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin: 0 5px;
+
+            &.active {
+                border-color: black;
+            }
+        }
+    }
+}
+
+section.map {
+    position: relative;
+    height: 610px;
+    overflow: hidden;
+
+    .circle {
+        position: absolute;
+        border: 1px dashed #555;
+        left: 50%;
+        border-radius: 50%;
+        transform: translateX(-50%);
+
+        &.inner {
+            width: 314px;
+            height: 314px;
+            top: 300px;
+        }
+
+        &.outer {
+            width: 568px;
+            height: 568px;
+            top: 172px;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 386px;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 140px;
+        border: 6px solid black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 100px;
+        }
+    }
+
+    .shape {
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 20px;
+
+        &.inner-purple {
+            top: 340px;
+            background: $purple;
+            left: 50%;
+            transform: translateX(-190px);
+        }
+
+        &.inner-blue {
+            background: $mid-blue;
+            top: 340px;
+            left: 50%;
+            transform: translateX(86px);
+        }
+
+        &.inner-sand {
+            background: $sand;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-52px);
+        }
+    }
+}
+
+section.features {
+    background: $dark-blue;
+    padding: 120px 0;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    .phone {
+        position: relative;
+        width: 30%;
+
+        @include mobile {
+            width: 70%;
+            margin: 15px auto;
+        }
+
+        .circle {
+            position: absolute;
+            border: 7px solid #364959;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes rotate {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg)
+                }
+
+                100% {
+                    transform: translate(-50%, -50%) rotate(160deg)
+                }
+            }
+
+
+
+            &.small {
+                width: 490px;
+                height: 490px;
+                animation-duration: 5s;
+
+
+                .dot {
+                    position: absolute;
+                    border-radius: 50%;
+                    height: 12px;
+                    width: 12px;
+
+                    &.dot1 {
+                        background: $purple;
+                        top: -10px;
+                        left: 50%;
+                    }
+
+                    &.dot2 {
+                        background: $sand;
+                        bottom: -10px;
+                        left: 50%;
+                    }
+                }
+            }
+
+            &.large {
+                width: 1160px;
+                height: 1160px;
+                animation-duration: 10s;
+
+
+                .dot {
+                    position: absolute;
+                    border-radius: 50%;
+                    height: 12px;
+                    width: 12px;
+
+                    &.dot1 {
+                        background: $purple;
+                        top: -10px;
+                        left: 50%;
+                    }
+
+                    &.dot2 {
+                        background: $sand;
+                        bottom: -10px;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+
+        .img {
+            width: 60%;
+        }
+    }
+
+    .wrapper {
+        z-index: 3;
+        width: 26%;
+
+        @include mobile {
+            width: 70%;
+            margin: 15px auto;
+        }
+
+
+        .heading {
+            height: 70px;
+        }
+
+        .line {
+            @include line(white);
+        }
+
+        h3 {
+            font-size: 24px;
+            color: whitesmoke;
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        p {
+            color: white;
+            line-height: 1.4;
+            font-weight: 300;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+    }
+}

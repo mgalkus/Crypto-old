@@ -15,6 +15,7 @@ header {
         width: 30px;
         display: none;
         cursor: pointer;
+
         @include mobile {
             display: block;
         }
@@ -28,11 +29,22 @@ header {
 
     ul {
         display: flex;
-        align-items: center;
+        position: relative;
+
+        .exit {
+            position: absolute;
+            width: 20px;
+            top: 20px;
+            right: 20px;
+            display: none;
+            @include mobile {
+                display: block;
+            }
+        }
     }
 
     li {
-        margin-left: 25px;
+        margin-left: 20px;
         color: $grey;
         display: flex;
         align-items: center;
@@ -41,15 +53,20 @@ header {
             color: #000;
             border: 2px solid black;
             line-height: 44px;
-            padding: 0 15px;
+            padding: 0 10px;
             border-radius: 20px;
             font-weight: 500;
             user-select: none;
             cursor: pointer;
             box-sizing: border-box;
+
+            @include mobile {
+                width: fit-content;
+            }
         }
 
         img {
+            position: relative;
             width: 14px;
             margin-left: 6px;
         }

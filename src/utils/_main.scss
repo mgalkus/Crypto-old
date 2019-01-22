@@ -1,20 +1,21 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: center
 }
 
-.container{
+.container {
     max-width: 1000px;
     margin: auto;
     width: 90%;
 }
 
-// kad ant mobile paspaudus meniu mygtuka neskrolintu zemyn (nes uz visko visos kitos sekcijos butu)
-.no-scroll{
+// kad ant mobile paspaudus meniu mygtuka neskrolintu zemyn (nes uz visko butu visos kitos sekcijos)
+.no-scroll {
     overflow-y: hidden;
 }
-.active-menu{
+
+.active-menu {
     display: block;
     position: fixed;
     z-index: 900;
@@ -23,14 +24,16 @@ body{
     height: 100vh;
     top: 0;
     left: 0;
-    ul{
-        margin-top: 70px;
-        display: block;
-        width: 90%;
+
+    ul {
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    li{
-        margin-left: 25px;
-        line-height: 2;
+
+    li {
+        margin-bottom: 25px;
         font-size: 26px;
     }
 }

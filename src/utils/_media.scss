@@ -4,14 +4,23 @@
     }
 }
 
-@mixin tablet-p {
+@mixin tablet-portrait {
     @media (max-width: 899px) {
         @content;
     }
 }
 
-@mixin tablet-l {
+@mixin tablet-landscape {
     @media (max-width: 1099px) {
         @content;
     }
 }
+
+// - nav i html, css paslept 
+// - exit button i html, apsirasyt css, paslept ir rodyt kai mobile
+// apsirasyti .no-scroll {
+//   overflow-y: hidden;
+// apsirasyti .active-nav - paspaudus mygtuka kaip turetu meniu islist
+// js apsirasyt nav, uzdet event listener klase .active-nav
+// js apsirasyt  body  uzdet event listener klase .no-scroll
+// js landing ir heading uzdet .white-background
